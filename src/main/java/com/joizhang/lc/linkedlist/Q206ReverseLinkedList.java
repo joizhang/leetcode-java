@@ -27,10 +27,10 @@ public class Q206ReverseLinkedList {
 
     public static void main(String[] args) {
         Q206ReverseLinkedList test = new Q206ReverseLinkedList();
-        ListNode head = new ListNode(new int[]{1,2,3,4,5});
+        ListNode head = new ListNode(new int[]{1, 2, 3, 4, 5});
         System.out.println(test.reverseList(head));
 
-        head = new ListNode(new int[]{1,2,3,4,5});
+        head = new ListNode(new int[]{1, 2, 3, 4, 5});
         System.out.println(test.reverseList2(head));
     }
 }
