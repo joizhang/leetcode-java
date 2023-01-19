@@ -1,5 +1,8 @@
 package com.joizhang.lc.string;
 
+/**
+ * 171. Excel 表列序号
+ */
 public class Q171ExcelSheetColumnNumber {
     public int titleToNumber(String columnTitle) {
         int res = 0;
