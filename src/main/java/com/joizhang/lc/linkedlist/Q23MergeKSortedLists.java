@@ -46,7 +46,6 @@ public class Q23MergeKSortedLists {
                 new ListNode(new int[]{2, 6})
         };
         System.out.println(test.mergeKLists(lists).toString());
-
         lists = new ListNode[]{};
         System.out.println(test.mergeKLists(lists));
     }
