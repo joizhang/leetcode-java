@@ -1,5 +1,8 @@
 package com.joizhang.lc.linkedlist;
 
+/**
+ * 2. 两数相加
+ */
 public class Q2AddTwoNumbers {
     public ListNode addTwoNumbers(ListNode l1, ListNode l2) {
         if (l1 == null) return l2;
