@@ -3,7 +3,7 @@ package com.joizhang.lc.linkedlist;
 /**
  * 19. 删除链表的倒数第 N 个结点
  */
-public class Q19RemoveNthNodeFromEndOfList {
+public class Q019RemoveNthNodeFromEndOfList {
     public ListNode removeNthFromEnd(ListNode head, int n) {
         ListNode dummy = new ListNode(0);
         dummy.next = head;
@@ -21,7 +21,7 @@ public class Q19RemoveNthNodeFromEndOfList {
     }
 
     public static void main(String[] args) {
-        Q19RemoveNthNodeFromEndOfList test = new Q19RemoveNthNodeFromEndOfList();
+        Q019RemoveNthNodeFromEndOfList test = new Q019RemoveNthNodeFromEndOfList();
         ListNode head = new ListNode(new int[]{1,2,3,4,5});
         System.out.println(test.removeNthFromEnd(head, 2).toString());
 
