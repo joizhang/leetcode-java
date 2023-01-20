@@ -6,7 +6,7 @@ import java.util.Deque;
 /**
  * 25. K 个一组翻转链表
  */
-public class Q25ReverseNodesInKGroup {
+public class Q025ReverseNodesInKGroup {
     public ListNode reverseKGroup(ListNode head, int k) {
         if (head == null) return null;
         ListNode dummy = new ListNode(0);
@@ -39,7 +39,7 @@ public class Q25ReverseNodesInKGroup {
     }
 
     public static void main(String[] args) {
-        Q25ReverseNodesInKGroup test = new Q25ReverseNodesInKGroup();
+        Q025ReverseNodesInKGroup test = new Q025ReverseNodesInKGroup();
         ListNode head = new ListNode(new int[]{1, 2, 3, 4, 5});
         System.out.println(test.reverseKGroup(head, 2));
         head = new ListNode(new int[]{1, 2, 3, 4, 5});
