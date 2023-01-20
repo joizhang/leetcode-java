@@ -4,6 +4,9 @@ import java.util.ArrayDeque;
 import java.util.Arrays;
 import java.util.Deque;
 
+/**
+ * 剑指 Offer 06. 从尾到头打印链表
+ */
 public class Offer06 {
     public int[] reversePrint(ListNode head) {
         if (head == null) return new int[]{};
