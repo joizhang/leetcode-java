@@ -1,5 +1,8 @@
 package com.joizhang.lcof.linkedlist;
 
+/**
+ * 剑指 Offer 24. 反转链表
+ */
 public class Offer24 {
     public ListNode reverseList(ListNode head) {
         if (head == null) return null;
