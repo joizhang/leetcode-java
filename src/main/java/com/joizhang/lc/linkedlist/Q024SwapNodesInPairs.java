@@ -3,7 +3,7 @@ package com.joizhang.lc.linkedlist;
 /**
  * 24. 两两交换链表中的节点
  */
-public class Q24SwapNodesInPairs {
+public class Q024SwapNodesInPairs {
     public ListNode swapPairs(ListNode head) {
         if (head == null) return null;
         ListNode dummy = new ListNode(0);
@@ -23,7 +23,7 @@ public class Q24SwapNodesInPairs {
     }
 
     public static void main(String[] args) {
-        Q24SwapNodesInPairs test = new Q24SwapNodesInPairs();
+        Q024SwapNodesInPairs test = new Q024SwapNodesInPairs();
         ListNode head = new ListNode(new int[]{1,2,3,4});
         System.out.println(test.swapPairs(head));
         head = new ListNode(new int[]{1,2,3});
