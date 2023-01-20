@@ -16,6 +16,9 @@ class Node {
     }
 }
 
+/**
+ * 剑指 Offer 35. 复杂链表的复制
+ */
 public class Offer35 {
     public Node copyRandomList(Node head) {
         if (head == null) return null;
