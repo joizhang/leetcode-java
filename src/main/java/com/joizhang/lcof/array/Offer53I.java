@@ -1,6 +1,9 @@
 package com.joizhang.lcof.array;
 
-public class Offer53 {
+/**
+ * 剑指 Offer 53 - I. 在排序数组中查找数字 I
+ */
+public class Offer53I {
     public int search(int[] nums, int target) {
         int[] ans = new int[]{-1, -1};
         if (nums.length == 0) return 0;
@@ -52,7 +55,7 @@ public class Offer53 {
     }
 
     public static void main(String[] args) {
-        Offer53 test = new Offer53();
+        Offer53I test = new Offer53I();
         System.out.println(test.search(new int[]{5, 7, 7, 8, 8, 10}, 8));
     }
 }
