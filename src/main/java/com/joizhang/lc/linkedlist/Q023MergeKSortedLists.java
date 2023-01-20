@@ -3,7 +3,7 @@ package com.joizhang.lc.linkedlist;
 /**
  * 23. 合并K个升序链表
  */
-public class Q23MergeKSortedLists {
+public class Q023MergeKSortedLists {
 
     public ListNode mergeKLists(ListNode[] lists) {
         if (lists == null || lists.length == 0) return null;
@@ -39,7 +39,7 @@ public class Q23MergeKSortedLists {
     }
 
     public static void main(String[] args) {
-        Q23MergeKSortedLists test = new Q23MergeKSortedLists();
+        Q023MergeKSortedLists test = new Q023MergeKSortedLists();
         ListNode[] lists = new ListNode[]{
                 new ListNode(new int[]{1, 4, 5}),
                 new ListNode(new int[]{1, 3, 4  }),
