@@ -1,6 +1,9 @@
 package com.joizhang.lc.linkedlist;
 
-public class Q21MergeTwoSortedLists {
+/**
+ * 21. 合并两个有序链表
+ */
+public class Q021MergeTwoSortedLists {
     public ListNode mergeTwoLists(ListNode list1, ListNode list2) {
         if (list1 == null) return list2;
         if (list2 == null) return list1;
@@ -25,7 +28,7 @@ public class Q21MergeTwoSortedLists {
     }
 
     public static void main(String[] args) {
-        Q21MergeTwoSortedLists test = new Q21MergeTwoSortedLists();
+        Q021MergeTwoSortedLists test = new Q021MergeTwoSortedLists();
         ListNode l1 = new ListNode(new int[]{1, 2, 4});
         ListNode l2 = new ListNode(new int[]{1, 3, 4});
         System.out.println(test.mergeTwoLists(l1, l2).toString());
