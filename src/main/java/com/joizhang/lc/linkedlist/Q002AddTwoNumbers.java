@@ -3,7 +3,7 @@ package com.joizhang.lc.linkedlist;
 /**
  * 2. 两数相加
  */
-public class Q2AddTwoNumbers {
+public class Q002AddTwoNumbers {
     public ListNode addTwoNumbers(ListNode l1, ListNode l2) {
         if (l1 == null) return l2;
         if (l2 == null) return l1;
@@ -38,7 +38,7 @@ public class Q2AddTwoNumbers {
     }
 
     public static void main(String[] args) {
-        Q2AddTwoNumbers test = new Q2AddTwoNumbers();
+        Q002AddTwoNumbers test = new Q002AddTwoNumbers();
         ListNode l1 = new ListNode(new int[]{2, 4, 3});
         ListNode l2 = new ListNode(new int[]{5, 6, 4});
         System.out.println(test.addTwoNumbers(l1, l2).toString());
