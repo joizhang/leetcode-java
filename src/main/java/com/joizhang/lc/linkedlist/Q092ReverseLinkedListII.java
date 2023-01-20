@@ -3,7 +3,7 @@ package com.joizhang.lc.linkedlist;
 /**
  * 92. 反转链表 II
  */
-public class Q92ReverseLinkedListII {
+public class Q092ReverseLinkedListII {
     public ListNode reverseBetween(ListNode head, int left, int right) {
         if (head == null) return null;
         ListNode dummy = new ListNode(0);
@@ -40,7 +40,7 @@ public class Q92ReverseLinkedListII {
     }
 
     public static void main(String[] args) {
-        Q92ReverseLinkedListII test = new Q92ReverseLinkedListII();
+        Q092ReverseLinkedListII test = new Q092ReverseLinkedListII();
         ListNode head = new ListNode(new int[]{1,2,3,4,5});
         System.out.println(test.reverseBetween(head, 2, 4));
         head = new ListNode(new int[]{5});
