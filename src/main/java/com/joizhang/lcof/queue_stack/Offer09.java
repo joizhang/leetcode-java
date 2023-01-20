@@ -3,6 +3,9 @@ package com.joizhang.lcof.queue_stack;
 import java.util.ArrayDeque;
 import java.util.Deque;
 
+/**
+ * 剑指 Offer 09. 用两个栈实现队列
+ */
 class CQueue {
 
     private final Deque<Integer> stackIn;
