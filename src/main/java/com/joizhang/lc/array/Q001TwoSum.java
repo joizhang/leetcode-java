@@ -7,7 +7,7 @@ import java.util.Map;
 /**
  * 1. 两数之和
  */
-public class Q1TwoSum {
+public class Q001TwoSum {
     public int[] twoSum(int[] nums, int target) {
         Map<Integer, Integer> map = new HashMap<>();
         for (int i = 0; i < nums.length; i++) {
@@ -22,7 +22,7 @@ public class Q1TwoSum {
     }
 
     public static void main(String[] args) {
-        Q1TwoSum test = new Q1TwoSum();
+        Q001TwoSum test = new Q001TwoSum();
         System.out.println(Arrays.toString(test.twoSum(new int[]{2, 7, 11, 15}, 9)));
         System.out.println(Arrays.toString(test.twoSum(new int[]{3, 2, 4}, 6)));
         System.out.println(Arrays.toString(test.twoSum(new int[]{3, 3}, 6)));
