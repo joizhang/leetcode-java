@@ -1,4 +1,4 @@
-package com.joizhang.lcof.array;
+package com.joizhang.lcof.binary_search;
 
 /**
  * 剑指 Offer 53 - I. 在排序数组中查找数字 I
