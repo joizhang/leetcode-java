@@ -8,6 +8,7 @@ import java.util.Set;
  * 剑指 Offer 03. 数组中重复的数字
  */
 public class Offer03 {
+    // 哈希表
     public int findRepeatNumber(int[] nums) {
         Set<Integer> set = new HashSet<>();
         for (int num : nums) {
@@ -19,6 +20,7 @@ public class Offer03 {
         return -1;
     }
 
+    // 排序
     public int findRepeatNumber2(int[] nums) {
         assert nums.length >= 2;
         Arrays.sort(nums);
@@ -30,6 +32,7 @@ public class Offer03 {
         return -1;
     }
 
+    // 原地交换
     public int findRepeatNumber3(int[] nums) {
         int i = 0;
         while (i < nums.length) {
