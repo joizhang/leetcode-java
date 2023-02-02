@@ -50,7 +50,7 @@ public class Codec {
             }
             i += 1;
             // 父节点对应的右侧子节点的值
-            if (!nodes[i].equals(NULL)) {
+            if (i < nodes.length && !nodes[i].equals(NULL)) {
                 parent.right = new TreeNode(Integer.parseInt(nodes[i]));
                 queue.offer(parent.right);
             }
