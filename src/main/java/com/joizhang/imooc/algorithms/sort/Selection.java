@@ -4,6 +4,7 @@ package com.joizhang.imooc.algorithms.sort;
  * 选择排序
  */
 public interface Selection {
+
     static <E extends Comparable<E>> void sort(E[] arr) {
         int n = arr.length;
         for (int i = 0; i < n; i++) {
@@ -17,4 +18,5 @@ public interface Selection {
             Sorts.exchange(arr, i, minIndex);
         }
     }
+
 }
