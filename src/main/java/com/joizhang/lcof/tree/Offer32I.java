@@ -13,13 +13,13 @@ public class Offer32I {
         Deque<TreeNode> queue = new LinkedList<>();
         queue.add(root);
         while (!queue.isEmpty()) {
-            TreeNode cur = queue.poll();
-            res.add(cur.val);
-            if (cur.left != null) {
-                queue.offer(cur.left);
+            TreeNode node = queue.poll();
+            res.add(node.val);
+            if (node.left != null) {
+                queue.offer(node.left);
             }
-            if (cur.right != null) {
-                queue.offer(cur.right);
+            if (node.right != null) {
+                queue.offer(node.right);
             }
         }
         return res.stream().mapToInt(i->i).toArray();
