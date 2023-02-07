@@ -26,6 +26,5 @@ public class Offer16 {
         System.out.println(test.myPow(2.10000, 3));
         System.out.println(test.myPow(2.00000, -2));
         System.out.println(test.myPow(1.00000, -2147483648));
-
     }
 }
