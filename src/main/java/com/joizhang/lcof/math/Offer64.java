@@ -1,4 +1,4 @@
-package com.joizhang.lcof.backtracking;
+package com.joizhang.lcof.math;
 
 /**
  * 剑指 Offer 64. 求1+2+…+n
