@@ -1,4 +1,4 @@
-package com.joizhang.lc.array;
+package com.joizhang.lc.math;
 
 /**
  * 136. 只出现一次的数字
