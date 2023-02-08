@@ -4,6 +4,8 @@ package com.joizhang.lcof.math;
  * 剑指 Offer 15. 二进制中1的个数
  */
 public class Offer15 {
+    // >> 带符号右移。正数右移高位补0，负数右移高位补1
+    // >>> 无符号右移。无论是正数还是负数，高位通通补0。
     // you need to treat n as an unsigned value
     public int hammingWeight(int n) {
         int res = 0;
@@ -11,6 +13,7 @@ public class Offer15 {
             if ((n & 1) == 1) {
                 res ++;
             }
+            // 有负数，需要使用无符号右移
             n >>>= 1;
         }
         return res;
