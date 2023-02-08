@@ -1,7 +1,7 @@
 package com.joizhang.lcof.math;
 
 /**
- *
+ * 剑指 Offer 15. 二进制中1的个数
  */
 public class Offer15 {
     // you need to treat n as an unsigned value
