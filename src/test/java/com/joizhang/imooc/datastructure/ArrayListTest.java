@@ -12,6 +12,7 @@ public class ArrayListTest {
         nums.addLast(1);
         nums.addLast(2);
         nums.addLast(3);
+        System.out.println(nums);
         assertEquals(3, nums.getSize());
         assertFalse(nums.isEmpty());
 

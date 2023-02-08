@@ -190,7 +190,7 @@ public class ArrayList<E> implements List<E>, Iterable<E> {
     @Override
     public String toString() {
         StringBuilder res = new StringBuilder();
-        res.append("ArrayList: size = ").append(size).append(", capacity = ").append(data.length).append("\n");
+        res.append("ArrayList: size = ").append(size).append(", capacity = ").append(data.length);
         res.append('[');
         for (int i = 0; i < size; i++) {
             res.append(data[i]);
