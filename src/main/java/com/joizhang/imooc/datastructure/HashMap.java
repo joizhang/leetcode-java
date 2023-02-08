@@ -52,7 +52,7 @@ public class HashMap<K, V> implements Map<K, V> {
         int bucketIndex = hash(key);
         LinkedList<Node> nodes = buckets[bucketIndex];
         for (Node node : nodes) {
-            if (node.key.equals(value)) {
+            if (node.key.equals(key)) {
                 node.value = value;
                 return;
             }
