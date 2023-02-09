@@ -13,7 +13,7 @@ public class Q3LongestSubstringWithoutRepeatingCharacters {
         Map<Character, Integer> map = new HashMap<>();
         for (int i = 0; i < s.length(); i++) {
             char c = s.charAt(i);
-            // 如果c已经存在，则更新滑动窗口的其实位置
+            // 如果c已经存在，则更新滑动窗口的起始位置
             if (map.containsKey(c)) {
                 start = Math.max(start, map.get(c) + 1);
             }
