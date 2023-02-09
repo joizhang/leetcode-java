@@ -3,23 +3,23 @@ package com.joizhang.lcof.linkedlist;
 import java.util.HashMap;
 import java.util.Map;
 
-// Definition for a Node.
-class Node {
-    int val;
-    Node next;
-    Node random;
-
-    public Node(int val) {
-        this.val = val;
-        this.next = null;
-        this.random = null;
-    }
-}
-
 /**
  * 剑指 Offer 35. 复杂链表的复制
  */
 public class Offer35 {
+    // Definition for a Node.
+    static class Node {
+        int val;
+        Node next;
+        Node random;
+
+        public Node(int val) {
+            this.val = val;
+            this.next = null;
+            this.random = null;
+        }
+    }
+
     public Node copyRandomList(Node head) {
         if (head == null) return null;
         Map<Node, Node> map = new HashMap<>();
