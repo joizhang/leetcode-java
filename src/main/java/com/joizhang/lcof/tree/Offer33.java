@@ -8,6 +8,7 @@ public class Offer33 {
         return recur(postorder, 0, postorder.length - 1);
     }
 
+    // 通过递归，判断所有子树的正确性
     private boolean recur(int[] postorder, int i, int j) {
         if (i >= j) return true;
         int p = i;
