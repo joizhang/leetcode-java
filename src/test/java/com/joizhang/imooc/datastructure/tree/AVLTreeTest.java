@@ -1,4 +1,4 @@
-package com.joizhang.imooc.datastructure;
+package com.joizhang.imooc.datastructure.tree;
 
 import com.joizhang.imooc.algorithms.FileOperation;
 import org.junit.Before;
@@ -11,7 +11,7 @@ import static org.junit.Assert.assertTrue;
 
 public class AVLTreeTest {
 
-    class WordCount implements Comparable<WordCount> {
+    static class WordCount implements Comparable<WordCount> {
         private String word;
 
         private int count;

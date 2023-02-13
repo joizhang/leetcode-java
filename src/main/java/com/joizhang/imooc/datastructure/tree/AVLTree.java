@@ -1,4 +1,6 @@
-package com.joizhang.imooc.datastructure;
+package com.joizhang.imooc.datastructure.tree;
+
+import com.joizhang.imooc.datastructure.ArrayList;
 
 /**
  * 平衡二叉树

@@ -1,4 +1,9 @@
-package com.joizhang.imooc.datastructure;
+package com.joizhang.imooc.datastructure.tree;
+
+import com.joizhang.imooc.datastructure.ArrayStack;
+import com.joizhang.imooc.datastructure.LinkedQueue;
+import com.joizhang.imooc.datastructure.Queue;
+import com.joizhang.imooc.datastructure.Stack;
 
 /**
  * 二分搜索树
