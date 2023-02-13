@@ -13,6 +13,7 @@ public class ArrayStackTest {
         stack.push(1);
         stack.push(2);
         stack.push(3);
+        assertEquals(3, stack.getSize());
         assertFalse(stack.isEmpty());
         assertEquals(Integer.valueOf(3), stack.peek());
         assertEquals(Integer.valueOf(3), stack.pop());
