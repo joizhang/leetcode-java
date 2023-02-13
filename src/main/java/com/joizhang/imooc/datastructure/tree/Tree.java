@@ -1,4 +1,4 @@
-package com.joizhang.imooc.datastructure;
+package com.joizhang.imooc.datastructure.tree;
 
 /**
  * @author joizhang
