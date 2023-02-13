@@ -2,7 +2,7 @@ package com.joizhang.lcof.math;
 
 /**
  * 剑指 Offer 62. 圆圈中最后剩下的数字
- * https://leetcode.cn/problems/yuan-quan-zhong-zui-hou-sheng-xia-de-shu-zi-lcof/solution/javajie-jue-yue-se-fu-huan-wen-ti-gao-su-ni-wei-sh/
+ * <a href="https://leetcode.cn/problems/yuan-quan-zhong-zui-hou-sheng-xia-de-shu-zi-lcof/solution/javajie-jue-yue-se-fu-huan-wen-ti-gao-su-ni-wei-sh/">...</a>
  */
 public class Offer62 {
     public int lastRemaining(int n, int m) {
