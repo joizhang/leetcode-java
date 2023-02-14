@@ -1,7 +1,8 @@
 package com.joizhang.imooc.algorithms.sort;
 
 /**
- * 希尔排序
+ * 希尔排序。希尔排序使用插入排序对间隔 h 的序列进行排序。通过不断减小 h，
+ * 最后令 h=1，就可以使得整个数组是有序的。
  */
 public interface Shell {
 
