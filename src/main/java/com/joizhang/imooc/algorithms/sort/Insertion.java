@@ -1,5 +1,8 @@
 package com.joizhang.imooc.algorithms.sort;
 
+/**
+ * 插入排序
+ */
 public interface Insertion {
 
     static <E extends Comparable<E>> void sort(E[] a) {
