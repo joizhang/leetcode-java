@@ -1,7 +1,8 @@
 package com.joizhang.imooc.algorithms.sort;
 
 /**
- * 选择排序
+ * 选择排序。选择排序需要 ~N2/2 次比较和 ~N 次交换，它的运行时间与输入无关，
+ * 这个特点使得它对一个已经排序的数组也需要这么多的比较和交换操作。
  */
 public interface Selection {
 
