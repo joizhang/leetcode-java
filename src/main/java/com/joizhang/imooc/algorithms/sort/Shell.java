@@ -2,8 +2,6 @@ package com.joizhang.imooc.algorithms.sort;
 
 /**
  * 希尔排序
- *
- * @author joizhang
  */
 public interface Shell {
 
