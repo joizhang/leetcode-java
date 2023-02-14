@@ -1,5 +1,8 @@
 package com.joizhang.imooc.algorithms.sort;
 
+/**
+ * 堆排序
+ */
 public interface Heap {
 
     static <E extends Comparable<E>> void sort(E[] a) {
