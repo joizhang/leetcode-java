@@ -2,6 +2,9 @@ package com.joizhang.imooc.algorithms.sort;
 
 import java.util.Random;
 
+/**
+ * 排序工具
+ */
 public interface Sorts {
 
     Random RANDOM = new Random(47);
