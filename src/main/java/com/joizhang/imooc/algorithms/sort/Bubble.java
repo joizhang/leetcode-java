@@ -15,6 +15,7 @@ public interface Bubble {
                     swapped = true;
                 }
             }
+            // 在一轮循环中，如果没有发生交换，那么说明数组已经是有序的，此时可以直接退出。
             if (!swapped) break;
         }
     }
