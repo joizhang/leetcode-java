@@ -1,5 +1,8 @@
 package com.joizhang.imooc.algorithms.sort;
 
+/**
+ * 冒泡排序
+ */
 public interface Bubble {
 
     static <E extends Comparable<E>> void sort(E[] arr) {
