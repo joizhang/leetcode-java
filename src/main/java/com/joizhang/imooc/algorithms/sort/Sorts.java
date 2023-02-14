@@ -14,6 +14,10 @@ public interface Sorts {
      */
     enum SortType {
         /**
+         * 冒泡排序
+         */
+        BUBBLE,
+        /**
          * 选择排序
          */
         SELECTION,

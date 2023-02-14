@@ -11,7 +11,9 @@ public interface SortCompare {
 
     static <E extends Comparable<E>> double time(Sorts.SortType sortType, E[] a) {
         Stopwatch stopwatch = new Stopwatch();
-        if (Sorts.SortType.SELECTION.equals(sortType)) {
+        if (Sorts.SortType.BUBBLE.equals(sortType)) {
+            Bubble.sort(a);
+        } else if (Sorts.SortType.SELECTION.equals(sortType)) {
             Selection.sort(a);
         } else if (Sorts.SortType.INSERTION.equals(sortType)) {
             Insertion.sort(a);
