@@ -37,6 +37,10 @@ public interface Sorts {
          * 快速排序
          */
         QUICK,
+        /**
+         * 堆排序
+         */
+        HEAP,
     }
 
     static <E extends Comparable<E>> boolean less(E v, E w) {
@@ -94,9 +98,9 @@ public interface Sorts {
         return arr;
     }
 
-    static void insertionSort(Integer[] arr, int l, int r) {
+    static <E extends Comparable<E>> void insertionSort(E[] arr, int l, int r) {
         for (int i = l + 1; i <= r; i++) {
-            Integer e = arr[i];
+            E e = arr[i];
             int j;
             for (j = i; j > l && Sorts.less(e, arr[j - 1]); j--) {
                 arr[j] = arr[j - 1];

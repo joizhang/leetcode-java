@@ -1,7 +1,8 @@
 package com.joizhang.imooc.algorithms.sort;
 
 /**
- * 3路快速排序
+ * 3路快速排序。对于有大量重复元素的数组，可以将数组切分为三部分，分别对应小于、等于和大于切分元素。
+ * 三向切分快速排序对于有大量重复元素的随机数组可以在线性时间内完成排序。
  */
 public interface Quick3Ways {
 
@@ -44,7 +45,5 @@ public interface Quick3Ways {
         quickSort3Ways(arr, l, lt - 1);
         quickSort3Ways(arr, gt, r);
     }
-
-
 
 }

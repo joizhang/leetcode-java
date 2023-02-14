@@ -36,7 +36,7 @@ public interface Quick2Ways {
             while (j >= l + 1 && Sorts.less(v, arr[j])) {
                 j--;
             }
-            if (i > j) break;
+            if (i >= j) break;
             Sorts.exchange(arr, i, j);
             i++;
             j--;

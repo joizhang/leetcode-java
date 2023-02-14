@@ -33,7 +33,7 @@ public interface Quick {
         int randInt = l + (int) (Math.random() * (r - l + 1));
         Sorts.exchange(arr, l, randInt);
         E v = arr[l];
-        // a[l+1...j-1] < v; a[j+1...i] >= v
+        // a[l+1...j] < v; a[j+1...i] >= v
         int j = l;
         for (int i = l + 1; i <= r; i++) {
             if (Sorts.less(arr[i], v)) {
