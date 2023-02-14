@@ -1,7 +1,9 @@
 package com.joizhang.imooc.algorithms.sort;
 
 /**
- * 归并排序的思想是将数组分成两部分，分别进行排序，然后归并起来。
+ * 自顶向下归并排序。
+ * 将一个大数组分成两个小数组去求解。因为每次都将问题对半分成两个子问题，
+ * 这种对半分的算法复杂度一般为 O(NlogN)。
  */
 public interface Merge {
 
