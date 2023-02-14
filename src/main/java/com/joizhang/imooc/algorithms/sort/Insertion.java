@@ -1,7 +1,7 @@
 package com.joizhang.imooc.algorithms.sort;
 
 /**
- * 插入排序
+ * 插入排序，适用于近乎有序的数组
  */
 public interface Insertion {
 
