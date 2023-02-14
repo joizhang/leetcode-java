@@ -2,15 +2,13 @@ package com.joizhang.imooc.datastructure;
 
 import org.junit.Test;
 
-import java.util.Iterator;
-
 import static org.junit.Assert.*;
 
-public class ArrayListTest {
+public class LinkedListTest {
 
     @Test
-    public void testArrayList() {
-        List<Integer> nums = new ArrayList<>();
+    public void testLinkedList() {
+        List<Integer> nums = new LinkedList<>();
         nums.addLast(1);
         nums.addLast(2);
         nums.addLast(3);
@@ -26,17 +24,6 @@ public class ArrayListTest {
             nums.addLast(i);
         }
         assertEquals(11, nums.getSize());
-    }
-
-    @Test
-    public void testIterateArrayList() {
-        List<Integer> nums = new ArrayList<>();
-        for (int i = 0; i < 11; i++) {
-            nums.addLast(i);
-        }
-        for (Integer num : nums) {
-            System.out.println(num);
-        }
     }
 
 }

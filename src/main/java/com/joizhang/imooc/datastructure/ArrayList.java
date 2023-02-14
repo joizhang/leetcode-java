@@ -3,7 +3,7 @@ package com.joizhang.imooc.datastructure;
 import java.util.Iterator;
 import java.util.NoSuchElementException;
 
-public class ArrayList<E> implements List<E>, Iterable<E> {
+public class ArrayList<E> implements List<E> {
 
     private E[] data;
 

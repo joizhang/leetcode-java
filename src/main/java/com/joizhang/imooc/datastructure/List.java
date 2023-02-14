@@ -5,7 +5,7 @@ package com.joizhang.imooc.datastructure;
  *
  * @author joizhang
  */
-public interface List<E> {
+public interface List<E> extends Iterable<E> {
 
     /**
      * 获取数组中的元素个数
