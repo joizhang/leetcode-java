@@ -48,8 +48,8 @@ public interface Merge {
             } else if (j > r) {
                 arr[k] = aux[i];
                 i++;
-            } else if (Sorts.less(aux[i], aux[j])) {
-                arr[k] = aux[i];
+            } else if (aux[i].compareTo(aux[j]) <= 0) {
+                arr[k] = aux[i]; // 先进行这一步，保证稳定性
                 i++;
             } else {
                 arr[k] = aux[j];
