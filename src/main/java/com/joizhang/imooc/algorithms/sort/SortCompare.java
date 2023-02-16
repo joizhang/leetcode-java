@@ -22,7 +22,9 @@ public interface SortCompare {
         } else if (Sorts.SortType.MERGE.equals(sortType)) {
             Merge.sort(a);
         } else if (Sorts.SortType.QUICK.equals(sortType)) {
-            Quick.sort(a);
+            Quick2Ways.sort(a);
+        } else if (Sorts.SortType.HEAP.equals(sortType)) {
+            Heap.sort(a);
         }
         return stopwatch.elapsedTime();
     }
