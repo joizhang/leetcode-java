@@ -94,6 +94,7 @@ public class MaxHeap<E extends Comparable<E>> implements Heap<E> {
             if (j + 1 < data.getSize() && data.get(j + 1).compareTo(data.get(j)) > 0) {
                 j = rightChild(k);
             }
+            // 和父节点比较
             if (data.get(k).compareTo(data.get(j)) >= 0) {
                 break;
             }
