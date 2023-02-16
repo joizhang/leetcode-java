@@ -8,6 +8,7 @@ import java.util.Deque;
  * 剑指 Offer 06. 从尾到头打印链表
  */
 public class Offer06 {
+    // 栈
     public int[] reversePrint(ListNode head) {
         if (head == null) return new int[]{};
         Deque<Integer> stack = new ArrayDeque<>();
