@@ -41,28 +41,31 @@ public class Q1114PrintInOrder {
 
     public static void main(String[] args) {
         Foo foo = new Foo();
-        ExecutorService executorService = Executors.newCachedThreadPool();
-        executorService.execute(() -> {
+        Runnable a = () -> {
             try {
-                foo.first(() -> System.out.println("first"));
+                foo.first(() -> System.out.print("first"));
             } catch (InterruptedException e) {
-                throw new RuntimeException(e);
+                e.printStackTrace();
             }
-        });
-        executorService.execute(() -> {
+        };
+        Runnable b = () -> {
             try {
-                foo.second(() -> System.out.println("second"));
+                foo.second(() -> System.out.print("second"));
             } catch (InterruptedException e) {
-                throw new RuntimeException(e);
+                e.printStackTrace();
             }
-        });
-        executorService.execute(() -> {
+        };
+        Runnable c = () -> {
             try {
-                foo.third(() -> System.out.println("third"));
+                foo.third(() -> System.out.print("third"));
             } catch (InterruptedException e) {
-                throw new RuntimeException(e);
+                e.printStackTrace();
             }
-        });
+        };
+        ExecutorService executorService = Executors.newFixedThreadPool(3);
+        executorService.execute(c);
+        executorService.execute(a);
+        executorService.execute(b);
         executorService.shutdown();
     }
 }
