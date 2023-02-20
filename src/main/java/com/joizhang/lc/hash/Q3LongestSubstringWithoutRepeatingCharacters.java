@@ -1,4 +1,4 @@
-package com.joizhang.lc.string;
+package com.joizhang.lc.hash;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -8,28 +8,25 @@ import java.util.Map;
  */
 public class Q3LongestSubstringWithoutRepeatingCharacters {
     public int lengthOfLongestSubstring(String s) {
-        int res = 0;
-        int start = 0;
         Map<Character, Integer> map = new HashMap<>();
+        int start = 0, res = 0;
         for (int i = 0; i < s.length(); i++) {
-            char c = s.charAt(i);
-            // 如果c已经存在，则更新滑动窗口的起始位置
+            Character c = s.charAt(i);
             if (map.containsKey(c)) {
                 start = Math.max(start, map.get(c) + 1);
             }
-            // 获取当前滑动窗口的大小
             res = Math.max(res, i - start + 1);
-            map.put(s.charAt(i), i);
+            map.put(c, i);
         }
         return res;
     }
 
     public static void main(String[] args) {
         Q3LongestSubstringWithoutRepeatingCharacters test = new Q3LongestSubstringWithoutRepeatingCharacters();
-        System.out.println(test.lengthOfLongestSubstring("abcabcbb"));
-        System.out.println(test.lengthOfLongestSubstring("bbbbb"));
-        System.out.println(test.lengthOfLongestSubstring("pwwkew"));
-        System.out.println(test.lengthOfLongestSubstring(""));
-        System.out.println(test.lengthOfLongestSubstring("bcbb"));
+        assert 3 == test.lengthOfLongestSubstring("abcabcbb");
+        assert 1 == test.lengthOfLongestSubstring("bbbbb");
+        assert 3 == test.lengthOfLongestSubstring("pwwkew");
+        assert 0 == test.lengthOfLongestSubstring("");
+        assert 2 == test.lengthOfLongestSubstring("bcbb");
     }
 }
