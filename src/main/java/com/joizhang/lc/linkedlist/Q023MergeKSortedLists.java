@@ -33,8 +33,11 @@ public class Q023MergeKSortedLists {
             }
             move = move.next;
         }
-        if (l1 != null) move.next = l1;
-        else move.next = l2;
+        if (l1 != null) {
+            move.next = l1;
+        } else {
+            move.next = l2;
+        }
         return dummy.next;
     }
 
@@ -42,7 +45,7 @@ public class Q023MergeKSortedLists {
         Q023MergeKSortedLists test = new Q023MergeKSortedLists();
         ListNode[] lists = new ListNode[]{
                 new ListNode(new int[]{1, 4, 5}),
-                new ListNode(new int[]{1, 3, 4  }),
+                new ListNode(new int[]{1, 3, 4}),
                 new ListNode(new int[]{2, 6})
         };
         System.out.println(test.mergeKLists(lists).toString());
