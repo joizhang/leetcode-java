@@ -8,7 +8,7 @@ public class Q019RemoveNthNodeFromEndOfList {
         ListNode dummy = new ListNode(0);
         dummy.next = head;
         ListNode first = dummy;
-        for (int i = 0; i< n; i++) {
+        for (int i = 0; i < n; i++) {
             first = first.next;
         }
         ListNode second = dummy;
@@ -22,10 +22,10 @@ public class Q019RemoveNthNodeFromEndOfList {
 
     public static void main(String[] args) {
         Q019RemoveNthNodeFromEndOfList test = new Q019RemoveNthNodeFromEndOfList();
-        ListNode head = new ListNode(new int[]{1,2,3,4,5});
+        ListNode head = new ListNode(new int[]{1, 2, 3, 4, 5});
         System.out.println(test.removeNthFromEnd(head, 2).toString());
 
-        head = new ListNode(new int[]{1,2,3,4,5});
+        head = new ListNode(new int[]{1, 2, 3, 4, 5});
         System.out.println(test.removeNthFromEnd(head, 5).toString());
     }
 }
