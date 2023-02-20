@@ -3,15 +3,15 @@ package com.joizhang.lc.linkedlist;
 import java.util.Objects;
 
 public class ListNode {
-    int val;
+    public int val;
 
-    ListNode next;
+    public ListNode next;
 
-    ListNode(int x) {
+    public ListNode(int x) {
         val = x;
     }
 
-    ListNode(int[] arr) {
+    public ListNode(int[] arr) {
         if (arr == null || arr.length == 0) {
             throw new IllegalArgumentException("arr can not be empty");
         }
