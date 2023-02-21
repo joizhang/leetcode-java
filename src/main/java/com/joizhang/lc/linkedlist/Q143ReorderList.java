@@ -5,6 +5,7 @@ package com.joizhang.lc.linkedlist;
  */
 public class Q143ReorderList {
     // 1. 把链表存储到线性表中，然后用双指针依次从头尾取元素即可
+    // 2. 递归
     // 3. 将链表平均分成两半，然后将将第二个链表逆序，然后依次连接两个链表
     public void reorderList(ListNode head) {
         ListNode slow = head, fast = head;
