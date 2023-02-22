@@ -8,7 +8,7 @@ import java.util.Map;
  */
 public class Q138CopyListWithRandomPointer {
     // Definition for a Node.
-    static class Node {
+    private static class Node {
         int val;
         Node next;
         Node random;
