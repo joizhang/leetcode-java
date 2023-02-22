@@ -7,7 +7,7 @@ import java.util.Map;
  * 146. LRU 缓存
  */
 public class Q146LRUCache {
-    static class LRUCache {
+    private static class LRUCache {
 
         static class ListNode {
             private final int key;
