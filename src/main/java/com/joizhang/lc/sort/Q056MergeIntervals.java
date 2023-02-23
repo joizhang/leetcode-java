@@ -11,12 +11,14 @@ import java.util.List;
 public class Q056MergeIntervals {
     public int[][] merge(int[][] intervals) {
         if (intervals == null || intervals.length < 2) return intervals;
+        // 先执行排序
         Arrays.sort(intervals, new Comparator<int[]>() {
             @Override
             public int compare(int[] o1, int[] o2) {
                 return o1[0] - o2[0];
             }
         });
+
         List<int[]> mergedIntervals = new ArrayList<>();
         // 先加进去结果集，再修改，就不会漏了最后一个
         int[] newInterval = intervals[0];
