@@ -8,7 +8,7 @@ import java.util.List;
 /**
  * 56. 合并区间
  */
-public class Q56MergeIntervals {
+public class Q056MergeIntervals {
     public int[][] merge(int[][] intervals) {
         if (intervals == null || intervals.length < 2) return intervals;
         Arrays.sort(intervals, new Comparator<int[]>() {
@@ -34,7 +34,7 @@ public class Q56MergeIntervals {
     }
 
     public static void main(String[] args) {
-        Q56MergeIntervals test = new Q56MergeIntervals();
+        Q056MergeIntervals test = new Q056MergeIntervals();
         int[][] intervals = test.merge(new int[][]{
                 new int[]{2, 6},
                 new int[]{1, 3},
