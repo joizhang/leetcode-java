@@ -7,7 +7,7 @@ import java.util.List;
 /**
  * 15. 三数之和
  */
-public class Q015Sum {
+public class Q015ThreeSum {
     public List<List<Integer>> threeSum(int[] nums) {
         if (nums == null || nums.length < 3) return new ArrayList<>();
         Arrays.sort(nums);
@@ -25,7 +25,7 @@ public class Q015Sum {
             while (i < j) {
                 int sum = nums[i] + nums[j];
                 if (sum == target) {
-                    ans.add(new ArrayList<>(Arrays.asList(nums[i], nums[j])));
+                    ans.add(Arrays.asList(nums[i], nums[j]));
                     while (i < j && nums[i] == nums[i + 1]) {
                         i++;
                     }
@@ -64,7 +64,7 @@ public class Q015Sum {
     }
 
     public static void main(String[] args) {
-        Q015Sum test = new Q015Sum();
+        Q015ThreeSum test = new Q015ThreeSum();
         System.out.println(test.threeSum(new int[]{-1, 0, 1, 2, -1, -4}));
     }
 }
