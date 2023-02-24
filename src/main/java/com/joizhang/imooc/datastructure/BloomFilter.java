@@ -2,6 +2,11 @@ package com.joizhang.imooc.datastructure;
 
 import java.util.BitSet;
 
+/**
+ * 布隆过滤器
+ *
+ * @param <T>
+ */
 public class BloomFilter<T> {
 
     static class Hash<T> {
@@ -44,13 +49,26 @@ public class BloomFilter<T> {
         }
     }
 
+    /**
+     * 通过K个散列函数将这个key元素映射成一个位数组中的K个点，把它们置为1
+     *
+     * @param key 元素
+     */
     public void insert(T key) {
-        for(Hash<T> hash : hashFunctions) {
+
+        for (Hash<T> hash : hashFunctions) {
             int position = hash.compute(key) % bitSet.size();
             bitSet.set(position);
         }
     }
 
+    /**
+     * 检索时，我们只要看看这些点是不是都是1就（大约）知道集合中有没有它了：
+     * 如果这些点有任何一个0，则被检元素一定不在；如果都是1，则被检元素很可能在。
+     *
+     * @param key 元素
+     * @return 如果这些点有任何一个0，则被检元素一定不在；如果都是1，则被检元素很可能在。
+     */
     public boolean contains(T key) {
         for (Hash<T> hash : hashFunctions) {
             int position = hash.compute(key) % bitSet.size();
