@@ -24,6 +24,7 @@ public class Q039CombinationSum {
             // 剪枝，前提是候选数组已经有序
             if (target < candidates[start]) break;
             track.add(candidates[i]);
+            // 当前元素可以复用，所以参数start设为i
             backtrack(candidates, target - candidates[i], i, track, ans);
             track.remove(track.size() - 1);
         }
