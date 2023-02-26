@@ -23,12 +23,12 @@ public class Q017LetterCombinationsOfAPhoneNumber {
     public List<String> letterCombinations(String digits) {
         List<String> combinations = new ArrayList<>();
         if (digits == null || digits.isEmpty()) return combinations;
-        backtrack(combinations, digits, 0, new StringBuilder());
+        backtrack(digits, 0, new StringBuilder(), combinations);
         return combinations;
     }
 
     // index表示digits中的第几个字符
-    private void backtrack(List<String> combinations, String digits, int index, StringBuilder combination) {
+    private void backtrack(String digits, int index, StringBuilder combination, List<String> combinations) {
         if (digits.length() == combination.length()) {
             combinations.add(combination.toString());
             return;
@@ -38,7 +38,7 @@ public class Q017LetterCombinationsOfAPhoneNumber {
         int letterLen = letter.length();
         for (int i = 0; i < letterLen; i++) {
             combination.append(letter.charAt(i));
-            backtrack(combinations, digits, index + 1, combination);
+            backtrack(digits, index + 1, combination, combinations);
             combination.deleteCharAt(combination.length() - 1);
         }
     }
