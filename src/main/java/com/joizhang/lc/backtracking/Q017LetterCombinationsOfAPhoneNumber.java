@@ -27,6 +27,7 @@ public class Q017LetterCombinationsOfAPhoneNumber {
         return combinations;
     }
 
+    // index表示digits中的第几个字符
     private void backtrack(List<String> combinations, String digits, int index, StringBuilder combination) {
         if (digits.length() == combination.length()) {
             combinations.add(combination.toString());
