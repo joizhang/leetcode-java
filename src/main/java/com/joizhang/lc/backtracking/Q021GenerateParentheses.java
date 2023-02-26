@@ -15,7 +15,9 @@ public class Q021GenerateParentheses {
     }
 
     private void backtrack(List<String> ans, int left, int right, StringBuilder track) {
+        // 若left > right，说明有多的')'在'('前面，不符合要求
         if (left > right) return;
+        // left < 0 || right < 0，说明括号的数量超过n
         if (left < 0 || right < 0) return;
         if (left == 0 && right == 0) {
             ans.add(track.toString());
