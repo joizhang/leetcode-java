@@ -10,11 +10,11 @@ public class Q039CombinationSum {
         List<List<Integer>> ans = new ArrayList<>();
         // 排序是剪枝的前提
         Arrays.sort(candidates);
-        backtrack(candidates, target, 0, new ArrayDeque<>(), ans);
+        backtrack(candidates, target, 0, new ArrayList<>(), ans);
         return ans;
     }
 
-    private void backtrack(int[] candidates, int target, int start, Deque<Integer> track, List<List<Integer>> ans) {
+    private void backtrack(int[] candidates, int target, int start, List<Integer> track, List<List<Integer>> ans) {
         if (target < 0) return;
         if (target == 0) {
             ans.add(new ArrayList<>(track));
@@ -22,10 +22,10 @@ public class Q039CombinationSum {
         }
         for (int i = start; i < candidates.length; i++) {
             // 剪枝，前提是候选数组已经有序
-            if (target < candidates[i]) break;
-            track.push(candidates[i]);
+            if (target < candidates[start]) break;
+            track.add(candidates[i]);
             backtrack(candidates, target - candidates[i], i, track, ans);
-            track.pop();
+            track.remove(track.size() - 1);
         }
     }
 
