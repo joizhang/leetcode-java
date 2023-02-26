@@ -38,6 +38,7 @@ public class Q017LetterCombinationsOfAPhoneNumber {
         int letterLen = letter.length();
         for (int i = 0; i < letterLen; i++) {
             combination.append(letter.charAt(i));
+            // index + 1表示与下一个letter进行组合
             backtrack(digits, index + 1, combination, combinations);
             combination.deleteCharAt(combination.length() - 1);
         }
