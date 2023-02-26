@@ -10,11 +10,11 @@ public class Q021GenerateParentheses {
     public List<String> generateParenthesis(int n) {
         List<String> ans = new ArrayList<>();
         if (n <= 0) return ans;
-        backtrack(ans, n, n, new StringBuilder());
+        backtrack(n, n, new StringBuilder(), ans);
         return ans;
     }
 
-    private void backtrack(List<String> ans, int left, int right, StringBuilder track) {
+    private void backtrack(int left, int right, StringBuilder track, List<String> ans) {
         // 若left > right，说明有多的')'在'('前面，不符合要求
         if (left > right) return;
         // left < 0 || right < 0，说明括号的数量超过n
@@ -25,11 +25,11 @@ public class Q021GenerateParentheses {
         }
 
         track.append('(');
-        backtrack(ans, left - 1, right, track);
+        backtrack(left - 1, right, track, ans);
         track.deleteCharAt(track.length() - 1);
 
         track.append(')');
-        backtrack(ans, left, right - 1, track);
+        backtrack(left, right - 1, track, ans);
         track.deleteCharAt(track.length() - 1);
     }
 
