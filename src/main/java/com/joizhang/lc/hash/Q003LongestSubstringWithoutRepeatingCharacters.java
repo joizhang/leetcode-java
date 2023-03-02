@@ -6,7 +6,7 @@ import java.util.Map;
 /**
  * 3. 无重复字符的最长子串
  */
-public class Q3LongestSubstringWithoutRepeatingCharacters {
+public class Q003LongestSubstringWithoutRepeatingCharacters {
     public int lengthOfLongestSubstring(String s) {
         Map<Character, Integer> map = new HashMap<>();
         int start = 0, res = 0;
@@ -22,7 +22,7 @@ public class Q3LongestSubstringWithoutRepeatingCharacters {
     }
 
     public static void main(String[] args) {
-        Q3LongestSubstringWithoutRepeatingCharacters test = new Q3LongestSubstringWithoutRepeatingCharacters();
+        Q003LongestSubstringWithoutRepeatingCharacters test = new Q003LongestSubstringWithoutRepeatingCharacters();
         assert 3 == test.lengthOfLongestSubstring("abcabcbb");
         assert 1 == test.lengthOfLongestSubstring("bbbbb");
         assert 3 == test.lengthOfLongestSubstring("pwwkew");
