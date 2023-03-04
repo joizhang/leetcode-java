@@ -1,4 +1,4 @@
-package com.joizhang.lc.dp.array;
+package com.joizhang.lc.dp.path;
 
 /**
  * 64. 最小路径和
