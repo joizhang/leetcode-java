@@ -4,7 +4,6 @@ package com.joizhang.lc.dp.array;
  * 55. 跳跃游戏
  */
 public class Q055JumpGame {
-    // 1,1,0,1
     public boolean canJump(int[] nums) {
         int goal = 0;
         for (int i = 0; i < nums.length; i++) {
