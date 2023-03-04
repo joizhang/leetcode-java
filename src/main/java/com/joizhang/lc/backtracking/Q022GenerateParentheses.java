@@ -6,7 +6,7 @@ import java.util.List;
 /**
  * 22. 括号生成
  */
-public class Q021GenerateParentheses {
+public class Q022GenerateParentheses {
     public List<String> generateParenthesis(int n) {
         List<String> ans = new ArrayList<>();
         if (n <= 0) return ans;
@@ -34,7 +34,7 @@ public class Q021GenerateParentheses {
     }
 
     public static void main(String[] args) {
-        Q021GenerateParentheses test = new Q021GenerateParentheses();
+        Q022GenerateParentheses test = new Q022GenerateParentheses();
         System.out.println(test.generateParenthesis(1));
         System.out.println(test.generateParenthesis(2));
         System.out.println(test.generateParenthesis(3));
