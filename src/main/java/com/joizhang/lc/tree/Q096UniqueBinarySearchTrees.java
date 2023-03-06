@@ -21,6 +21,8 @@ public class Q096UniqueBinarySearchTrees {
         int[] dp = new int[n + 1];
         dp[0] = 1;
         dp[1] = 1;
+        // 状态定义:dp[i]为当有i个节点时,一共可以组成的二叉搜索树数目
+        // 状态转移:dp[3]=dp[0]*dp[2]+dp[1]*dp[1]+dp[2]*dp[0]
         for (int i = 2; i < n + 1; i++) {
             for (int j = 1; j < i + 1; j++) {
                 dp[i] += dp[j - 1] * dp[i - j];
