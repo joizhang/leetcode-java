@@ -39,7 +39,10 @@ public class Q647PalindromicSubstrings {
                 }
             }
         }
-        return (int) Arrays.stream(dp).flatMap(Stream::of).filter(Boolean.TRUE::equals).count();
+        return (int) Arrays.stream(dp)
+                .flatMap(Stream::of)
+                .filter(Boolean.TRUE::equals)
+                .count();
     }
 
     public static void main(String[] args) {
