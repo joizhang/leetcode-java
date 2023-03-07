@@ -117,11 +117,18 @@ public class HashMap<K, V> implements Map<K, V> {
     @Override
     public String toString() {
         StringBuilder res = new StringBuilder();
-        res.append("HashMap: size=").append(size).append(", capacity=").append(buckets.length).append(", data=");
+        res.append("HashMap: size=")
+                .append(size)
+                .append(", capacity=")
+                .append(buckets.length)
+                .append(", data=");
         res.append('{');
         for (LinkedList<Node> nodes : buckets) {
             for (Node node : nodes) {
-                res.append(node.key).append(":").append(node.value).append(", ");
+                res.append(node.key)
+                        .append(":")
+                        .append(node.value)
+                        .append(", ");
             }
         }
         res.append("}");
