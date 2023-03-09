@@ -1,4 +1,4 @@
-package com.joizhang.lcof.dp.array;
+package com.joizhang.lcof.dp.game;
 
 /**
  * 剑指 Offer 63. 股票的最大利润
