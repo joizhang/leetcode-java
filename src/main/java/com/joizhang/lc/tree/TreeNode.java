@@ -1,11 +1,11 @@
 package com.joizhang.lc.tree;
 
 public class TreeNode {
-    int val;
+    public int val;
 
-    TreeNode left;
+    public TreeNode left;
 
-    TreeNode right;
+    public TreeNode right;
 
     TreeNode(int x) { val = x; }
 }

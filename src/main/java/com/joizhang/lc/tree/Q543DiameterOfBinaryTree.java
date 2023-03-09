@@ -2,6 +2,8 @@ package com.joizhang.lc.tree;
 
 /**
  * 543. 二叉树的直径
+ * 二叉树的直径是指树中任意两个相聚最远结点的长度，
+ * 结点之间的长度通过结点之间的边的数量得到
  */
 public class Q543DiameterOfBinaryTree {
     private int ans;
