@@ -11,6 +11,9 @@ public class Offer33 {
     // 通过递归，判断所有子树的正确性
     private boolean recur(int[] postorder, int i, int j) {
         if (i >= j) return true;
+        //  找到postorder[j]的左右子树的中间位置 m
+        //  postorder[i,...,m-1] < postorder[j]
+        //  postorder[m,...,j-1] > postorder[j]
         int p = i;
         while (postorder[p] < postorder[j]) p++;
         int m = p;
