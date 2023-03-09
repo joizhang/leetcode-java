@@ -1,4 +1,4 @@
-package com.joizhang.lc.sort;
+package com.joizhang.lc.hash;
 
 import java.util.Arrays;
 import java.util.HashSet;
