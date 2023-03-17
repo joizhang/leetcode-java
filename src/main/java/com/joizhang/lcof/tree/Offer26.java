@@ -6,7 +6,11 @@ package com.joizhang.lcof.tree;
 public class Offer26 {
 
     public boolean isSubStructure(TreeNode A, TreeNode B) {
+        // 约定空树不是任意一个树的子结构
         if (A == null || B == null) return false;
+        // 以节点 A 为根节点的子树 包含树 B ，对应 recur(A, B)；
+        // 树 B 是树 A 左子树的子结构，对应 isSubStructure(A.left, B)；
+        // 树 B 是 树 A 右子树的子结构，对应 isSubStructure(A.right, B)
         return recur(A, B) || isSubStructure(A.left, B) || isSubStructure(A.right, B);
     }
 
