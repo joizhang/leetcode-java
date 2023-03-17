@@ -17,7 +17,7 @@ import java.util.TreeMap;
  */
 public class Trie {
 
-    private class Node {
+    private static class Node {
 
         /**
          * 是否是一个单词的结尾
@@ -37,7 +37,7 @@ public class Trie {
 
     }
 
-    private Node root;
+    private final Node root;
 
     private int size;
 
@@ -76,8 +76,7 @@ public class Trie {
      * 查询单词 word 是否在Trie 中
      */
     public boolean contains(String word) {
-        Node cur = root;
-        return isPrefix(word) && cur.isWord;
+        return isPrefix(word) && root.isWord;
     }
 
     /**
