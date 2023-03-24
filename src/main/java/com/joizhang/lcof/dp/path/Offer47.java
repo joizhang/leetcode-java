@@ -1,4 +1,4 @@
-package com.joizhang.lcof.dp.array;
+package com.joizhang.lcof.dp.path;
 
 /**
  * 剑指 Offer 47. 礼物的最大价值
