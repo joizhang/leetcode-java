@@ -17,13 +17,13 @@ public class Offer53II {
 
     public int missingNumber2(int[] nums) {
         int lo = 0;
-        int hi = nums.length;
-        while (lo < hi) {
+        int hi = nums.length - 1;
+        while (lo <= hi) {
             int mid = lo + (hi - lo) / 2;
             if (mid == nums[mid]) {
                 lo = mid + 1;
             } else {
-                hi = mid;
+                hi = mid - 1;
             }
         }
         return lo;
@@ -32,8 +32,9 @@ public class Offer53II {
     public static void main(String[] args) {
         Offer53II test = new Offer53II();
         System.out.println(test.missingNumber(new int[]{0, 1, 2, 3, 4, 5, 6, 7, 9}));
-        System.out.println(test.missingNumber2(new int[]{0, 1, 2, 3, 4, 5, 6, 7, 9}));
         System.out.println(test.missingNumber(new int[]{0}));
+
+        System.out.println(test.missingNumber2(new int[]{0, 1, 2, 3, 4, 5, 6, 7, 9}));
         System.out.println(test.missingNumber2(new int[]{0}));
     }
 }
