@@ -10,11 +10,11 @@ import java.util.List;
 public class Offer17 {
     public int[] printNumbers(int n) {
         List<Integer> ans = new ArrayList<>();
-        backtrack(n, ans, new StringBuilder());
+        backtrack(n, new StringBuilder(), ans);
         return ans.stream().mapToInt(i -> i).toArray();
     }
 
-    private void backtrack(int n, List<Integer> ans, StringBuilder track) {
+    private void backtrack(int n, StringBuilder track, List<Integer> ans) {
         if (n == 0) {
             int num = Integer.parseInt(track.toString());
             if (num != 0) {
@@ -25,7 +25,7 @@ public class Offer17 {
 
         for (int i = 0; i <= 9; i++) {
             track.append(i);
-            backtrack(n - 1, ans, track);
+            backtrack(n - 1, track, ans);
             track.deleteCharAt(track.length() - 1);
         }
     }
