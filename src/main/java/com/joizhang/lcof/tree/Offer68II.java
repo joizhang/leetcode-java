@@ -29,7 +29,7 @@ public class Offer68II {
         Codec codec = new Codec();
         TreeNode root = codec.deserialize("[3,5,1,6,2,0,8,null,null,7,4]");
         TreeNode p = root.left.right.left;
-        TreeNode q = root.left.right.right;
+        TreeNode q = root.right.right;
         TreeNode node = test.lowestCommonAncestor(root, p, q);
         System.out.println(codec.serialize(root));
     }
