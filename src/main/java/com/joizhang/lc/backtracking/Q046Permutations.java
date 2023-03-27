@@ -34,5 +34,7 @@ public class Q046Permutations {
     public static void main(String[] args) {
         Q046Permutations test = new Q046Permutations();
         System.out.println(test.permute(new int[]{1, 2, 3}));
+        List<List<Integer>> permutes = test.permute(new int[]{1, 2, 3, 4, 5, 6});
+        permutes.forEach(System.out::println);
     }
 }
