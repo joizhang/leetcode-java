@@ -1,36 +1,39 @@
 package com.joizhang.lc;
 
-public class Solution {
-    public int minDistance(String word1, String word2) {
-        int m = word1.length(), n = word2.length();
-        int[][] dp = new int[m + 1][n + 1];
-        dp[0][0] = 0;
-        for (int i = 1; i < m + 1; i++) {
-            dp[i][0] = i;
-        }
-        for (int j = 1; j < n + 1; j++) {
-            dp[0][j] = j;
-        }
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Comparator;
+import java.util.List;
 
-        for (int i = 1; i < m + 1; i++) {
-            for (int j = 1; j < n + 1; j++) {
-                if (word1.charAt(i - 1) == word2.charAt(j - 1)) {
-                    dp[i][j] = dp[i - 1][j - 1];
-                } else {
-                    dp[i][j] = Math.min(dp[i][j - 1], Math.min(dp[i - 1][j], dp[i - 1][j - 1])) + 1;
-                }
+public class Solution {
+    public int[][] merge(int[][] intervals) {
+        Arrays.sort(intervals, Comparator.comparingInt(x -> x[0]));
+        List<int[]> res = new ArrayList<>();
+        int[] newInterval = intervals[0];
+        res.add(newInterval);
+        for (int i = 1; i < intervals.length; i++) {
+            int[] interval = intervals[i];
+            if (newInterval[1] < interval[0]) {
+                newInterval = intervals[i];
+                res.add(newInterval);
+            } else {
+                newInterval[1] = Math.max(newInterval[1], interval[1]);
             }
         }
-        return dp[m][n];
-    }
-
-    private void quickSort(int[] nums) {
-
+        return res.toArray(new int[res.size()][]);
     }
 
     public static void main(String[] args) {
         Solution test = new Solution();
-        System.out.println(test.minDistance("horse", "ros"));
-        System.out.println(test.minDistance("intention", "execution"));
+        System.out.println(Arrays.deepToString(test.merge(new int[][]{
+                new int[]{1, 3},
+                new int[]{2, 6},
+                new int[]{8, 10},
+                new int[]{15, 18}
+        })));
+        System.out.println(Arrays.deepToString(test.merge(new int[][]{
+                new int[]{1, 4},
+                new int[]{4, 5},
+        })));
     }
 }
