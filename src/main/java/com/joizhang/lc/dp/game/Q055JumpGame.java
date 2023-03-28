@@ -5,7 +5,6 @@ package com.joizhang.lc.dp.game;
  */
 public class Q055JumpGame {
     public boolean canJump(int[] nums) {
-        if (nums.length <= 1) return true;
         int goal = 0;
         for (int i = 0; i < nums.length - 1; i++) {
             goal = Math.max(goal, nums[i] + i);
