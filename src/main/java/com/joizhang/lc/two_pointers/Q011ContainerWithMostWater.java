@@ -11,6 +11,7 @@ public class Q011ContainerWithMostWater {
             int area = Math.min(height[i], height[j]) * (j - i);
             res = Math.max(res, area);
             // 选定两板高度中的短板，向中间收窄一格；
+            // 每轮向内移动短板，所有消去的状态都不会导致面积最大值丢失
             if (height[i] < height[j]) {
                 i++;
             } else {
