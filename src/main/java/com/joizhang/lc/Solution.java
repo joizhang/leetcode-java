@@ -1,29 +1,26 @@
 package com.joizhang.lc;
 
+import com.joizhang.imooc.datastructure.ArrayStack;
 import com.joizhang.lc.linkedlist.ListNode;
 
-import java.util.ArrayList;
+import java.util.ArrayDeque;
 import java.util.Arrays;
-import java.util.Comparator;
-import java.util.List;
+import java.util.Deque;
 
 public class Solution {
-    public ListNode reverseList(ListNode head) {
-        if (head == null) return null;
-        ListNode dummy = new ListNode(0);
-        ListNode p = head;
-        while (head != null) {
+
+    public int[] reversePrint(ListNode head) {
+        if (head == null) return new int[0];
+        Deque<Integer> stack = new ArrayDeque<>();
+        while(head != null) {
+            stack.push(head.val);
             head = head.next;
-            p.next = dummy.next;
-            dummy.next = p;
-            p = head;
         }
-        return dummy.next;
+        Object[] array = stack.toArray();
+        return Arrays.stream(array).mapToInt(i-> (int) i).toArray();
     }
 
     public static void main(String[] args) {
         Solution test = new Solution();
-        ListNode head = new ListNode(new int[]{1,2,3,4,5});
-        System.out.println(test.reverseList(head));
     }
 }
