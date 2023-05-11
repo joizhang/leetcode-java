@@ -1,23 +1,16 @@
 package com.joizhang.lc;
 
-import com.joizhang.imooc.datastructure.ArrayStack;
-import com.joizhang.lc.linkedlist.ListNode;
-
-import java.util.ArrayDeque;
-import java.util.Arrays;
-import java.util.Deque;
-
 public class Solution {
 
-    public int[] reversePrint(ListNode head) {
-        if (head == null) return new int[0];
-        Deque<Integer> stack = new ArrayDeque<>();
-        while(head != null) {
-            stack.push(head.val);
-            head = head.next;
+    public String reverseWords(String s) {
+        if (s == null || s.isEmpty()) return s;
+        String[] splitArr = s.trim().split(" ");
+        StringBuilder res = new StringBuilder();
+        for (int i = splitArr.length - 1; i >= 0; i--) {
+            if ("".equals(splitArr[i])) continue;
+            res.append(splitArr[i]).append(" ");
         }
-        Object[] array = stack.toArray();
-        return Arrays.stream(array).mapToInt(i-> (int) i).toArray();
+        return res.toString().trim();
     }
 
     public static void main(String[] args) {
