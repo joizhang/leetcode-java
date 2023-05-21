@@ -7,6 +7,7 @@ public class Offer11 {
     public int minArray(int[] numbers) {
         int lo = 0;
         int hi = numbers.length - 1;
+        // 在一个可能存在重复元素值的数组 numbers 寻找旋转点，旋转点就是最小值
         while (lo < hi) {
             int mid = lo + (hi - lo) / 2;
             if (numbers[mid] > numbers[hi]) {
