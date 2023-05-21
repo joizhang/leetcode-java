@@ -5,31 +5,54 @@ import java.util.Deque;
 
 public class Solution {
 
-    class CQueue {
+    static class MinStack {
 
-        private final Deque<Integer> stackIn;
-        private final Deque<Integer> stackOut;
+        private final Deque<Integer> stack;
 
-        public CQueue() {
-            stackIn = new ArrayDeque<>();
-            stackOut = new ArrayDeque<>();
+        private final Deque<Integer> minStack;
+
+        /**
+         * initialize your data structure here.
+         */
+        public MinStack() {
+            stack = new ArrayDeque<>();
+            minStack = new ArrayDeque<>();
         }
 
-        public void appendTail(int value) {
-            stackIn.push(value);
-        }
-
-        public int deleteHead() {
-            if (!stackOut.isEmpty()) return stackOut.pop();
-            if (stackIn.isEmpty()) return -1;
-            while (!stackIn.isEmpty()) {
-                stackOut.push(stackIn.pop());
+        public void push(int x) {
+            stack.push(x);
+            if (minStack.isEmpty() || x <= minStack.peek()) {
+                minStack.push(x);
             }
-            return stackOut.pop();
+        }
+
+        public void pop() {
+            if (stack.isEmpty()) throw new RuntimeException("Stack is empty.");
+            Integer x = stack.pop();
+            if (!minStack.isEmpty() && x.equals(minStack.peek())) {
+                minStack.pop();
+            }
+        }
+
+        public int top() {
+            if (stack.isEmpty()) throw new RuntimeException("Stack is empty.");
+            return stack.peek();
+        }
+
+        public int min() {
+            if (minStack.isEmpty()) throw new RuntimeException("Stack is empty.");
+            return minStack.peek();
         }
     }
 
     public static void main(String[] args) {
-        Solution test = new Solution();
+        MinStack minStack = new MinStack();
+        minStack.push(-2);
+        minStack.push(0);
+        minStack.push(-3);
+        minStack.min();   //--> 返回 -3.
+        minStack.pop();
+        minStack.top();      //--> 返回 0.
+        minStack.min();   //--> 返回 -2.
     }
 }
