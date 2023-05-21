@@ -1,16 +1,32 @@
 package com.joizhang.lc;
 
+import java.util.ArrayDeque;
+import java.util.Deque;
+
 public class Solution {
 
-    public String reverseWords(String s) {
-        if (s == null || s.isEmpty()) return s;
-        String[] splitArr = s.trim().split(" ");
-        StringBuilder res = new StringBuilder();
-        for (int i = splitArr.length - 1; i >= 0; i--) {
-            if ("".equals(splitArr[i])) continue;
-            res.append(splitArr[i]).append(" ");
+    class CQueue {
+
+        private final Deque<Integer> stackIn;
+        private final Deque<Integer> stackOut;
+
+        public CQueue() {
+            stackIn = new ArrayDeque<>();
+            stackOut = new ArrayDeque<>();
         }
-        return res.toString().trim();
+
+        public void appendTail(int value) {
+            stackIn.push(value);
+        }
+
+        public int deleteHead() {
+            if (!stackOut.isEmpty()) return stackOut.pop();
+            if (stackIn.isEmpty()) return -1;
+            while (!stackIn.isEmpty()) {
+                stackOut.push(stackIn.pop());
+            }
+            return stackOut.pop();
+        }
     }
 
     public static void main(String[] args) {
