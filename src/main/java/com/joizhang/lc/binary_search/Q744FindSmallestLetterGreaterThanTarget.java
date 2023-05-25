@@ -17,4 +17,8 @@ public class Q744FindSmallestLetterGreaterThanTarget {
         return letters[lo];
     }
 
+    public static void main(String[] args) {
+        Q744FindSmallestLetterGreaterThanTarget test = new Q744FindSmallestLetterGreaterThanTarget();
+        System.out.println(test.nextGreatestLetter(new char[]{'c', 'f', 'j'}, 'a'));
+    }
 }
