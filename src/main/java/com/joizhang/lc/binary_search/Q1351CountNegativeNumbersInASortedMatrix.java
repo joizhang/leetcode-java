@@ -29,5 +29,10 @@ public class Q1351CountNegativeNumbersInASortedMatrix {
                 new int[]{-1, -1, -2, -3},
         };
         System.out.println(test.countNegatives(grid));
+        grid = new int[][]{
+                new int[]{5, 1, 0},
+                new int[]{-5, -5, -5}
+        };
+        System.out.println(test.countNegatives(grid));
     }
 }
