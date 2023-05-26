@@ -31,8 +31,8 @@ public class Offer30 {
             if (stack.isEmpty() || minStack.isEmpty()) {
                 return;
             }
-            int x = stack.pop();
-            if (x == minStack.peek()) {
+            Integer x = stack.pop();
+            if (x.equals(minStack.peek())) {
                 minStack.pop();
             }
         }
