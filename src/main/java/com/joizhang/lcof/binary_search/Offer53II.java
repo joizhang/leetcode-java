@@ -6,13 +6,12 @@ package com.joizhang.lcof.binary_search;
 public class Offer53II {
     public int missingNumber(int[] nums) {
         // 一定有数字缺失
-        int n = nums.length + 1;
         for (int i = 0; i < nums.length; i++) {
             if (i != nums[i]) {
                 return i;
             }
         }
-        return n - 1;
+        return nums.length;
     }
 
     public int missingNumber2(int[] nums) {
