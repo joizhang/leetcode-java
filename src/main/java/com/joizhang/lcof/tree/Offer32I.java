@@ -22,7 +22,7 @@ public class Offer32I {
                 queue.offer(node.right);
             }
         }
-        return res.stream().mapToInt(i->i).toArray();
+        return res.stream().mapToInt(i -> i).toArray();
     }
 
     public static void main(String[] args) {
