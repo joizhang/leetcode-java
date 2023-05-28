@@ -1,37 +1,25 @@
 package com.joizhang.lcof;
 
-import java.util.ArrayDeque;
-import java.util.Arrays;
-import java.util.Deque;
-
 public class Solution {
 
-    public int[] maxSlidingWindow(int[] nums, int k) {
-        int[] res = new int[nums.length - k + 1];
-        Deque<Integer> deque = new ArrayDeque<>();
-        for (int i = 0; i < k; i++) {
-            while (!deque.isEmpty() && deque.peekLast() < nums[i]) {
-                deque.pollLast();
+    public int minArray(int[] numbers) {
+        int lo = 0, hi = numbers.length - 1;
+        while (lo <= hi) {
+            int mid = lo + (hi - lo) / 2;
+            if (numbers[mid] > numbers[hi]) {
+                lo = mid + 1;
+            } else if (numbers[mid] < numbers[hi]) {
+                hi = mid;
+            } else {
+                hi -= 1;
             }
-            deque.offerLast(nums[i]);
         }
-        int index = 0;
-        res[index++] = deque.peekFirst();
-        for (int i = k; i < nums.length; i++) {
-            while (!deque.isEmpty() && deque.peekLast() < nums[i]) {
-                deque.pollLast();
-            }
-            deque.offerLast(nums[i]);
-            if (nums[i - k] == deque.peekFirst()) {
-                deque.pollFirst();
-            }
-            res[index++] = deque.peekFirst();
-        }
-        return res;
+        return numbers[lo];
     }
 
     public static void main(String[] args) {
         Solution test = new Solution();
-        System.out.println(Arrays.toString(test.maxSlidingWindow(new int[]{1, 3, -1, -3, 5, 3, 6, 7}, 3)));
+        System.out.println(test.minArray(new int[]{3, 4, 5, 1, 2}));
+        System.out.println(test.minArray(new int[]{2, 2, 2, 0, 1}));
     }
 }
