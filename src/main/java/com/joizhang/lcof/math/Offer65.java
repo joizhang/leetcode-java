@@ -6,7 +6,9 @@ package com.joizhang.lcof.math;
 public class Offer65 {
     public int add(int a, int b) {
         while (b != 0) {
+            // 进位：与运算+左移一位
             int c = (a & b) << 1;
+            // 非进位和：异或运算
             a ^= b;
             b = c;
         }
