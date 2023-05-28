@@ -24,13 +24,13 @@ public class Offer59I {
         int index = 0;
         res[index++] = deque.peekFirst();
         for (int i = k; i < nums.length; i++) {
-            if (deque.peekFirst() == nums[i - k]) {
-                deque.pollFirst();
-            }
-            while (!deque.isEmpty() && nums[i] > deque.peekLast()) {
+            while (!deque.isEmpty() && deque.peekLast() < nums[i]) {
                 deque.pollLast();
             }
             deque.offerLast(nums[i]);
+            if (nums[i - k] == deque.peekFirst()) {
+                deque.pollFirst();
+            }
             res[index++] = deque.peekFirst();
         }
         return res;

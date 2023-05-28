@@ -1,42 +1,37 @@
 package com.joizhang.lcof;
 
+import java.util.ArrayDeque;
+import java.util.Arrays;
+import java.util.Deque;
+
 public class Solution {
 
-    public int strToInt(String str) {
-        if (str == null) return 0;
-        char[] s = str.trim().toCharArray();
-        if (s.length == 0) return 0;
-        int symbol = 1, i = 0, ans = 0;
-        if (s[i] == '-') {
-            symbol = -1;
-            i++;
-        } else if (s[i] == '+') {
-            i++;
+    public int[] maxSlidingWindow(int[] nums, int k) {
+        int[] res = new int[nums.length - k + 1];
+        Deque<Integer> deque = new ArrayDeque<>();
+        for (int i = 0; i < k; i++) {
+            while (!deque.isEmpty() && deque.peekLast() < nums[i]) {
+                deque.pollLast();
+            }
+            deque.offerLast(nums[i]);
         }
-
-        while (i < s.length) {
-            if (!Character.isDigit(s[i])) break;
-            if (s[i] == ' ') {
-                i++;
-                continue;
+        int index = 0;
+        res[index++] = deque.peekFirst();
+        for (int i = k; i < nums.length; i++) {
+            while (!deque.isEmpty() && deque.peekLast() < nums[i]) {
+                deque.pollLast();
             }
-            int num = (s[i] - '0') * symbol;
-            int MAX_VALUE_DIV_10 = Integer.MAX_VALUE / 10;
-            if (ans > MAX_VALUE_DIV_10 || (ans == MAX_VALUE_DIV_10 && num > 7)) {
-                return Integer.MAX_VALUE;
+            deque.offerLast(nums[i]);
+            if (nums[i - k] == deque.peekFirst()) {
+                deque.pollFirst();
             }
-            int MIN_VALUE_DIV_10 = Integer.MIN_VALUE / 10;
-            if (ans < MIN_VALUE_DIV_10 || (ans == MIN_VALUE_DIV_10 && num < -8)) {
-                return Integer.MIN_VALUE;
-            }
-            ans = ans * 10 + num;
-            i++;
+            res[index++] = deque.peekFirst();
         }
-        return ans;
+        return res;
     }
 
     public static void main(String[] args) {
         Solution test = new Solution();
-        System.out.println(test.strToInt("42"));
+        System.out.println(Arrays.toString(test.maxSlidingWindow(new int[]{1, 3, -1, -3, 5, 3, 6, 7}, 3)));
     }
 }
