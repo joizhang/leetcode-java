@@ -13,6 +13,7 @@ public class Offer56I {
             sum ^= num;
         }
         int first = 1;
+        // 通过与运算找到result第一个不为0的首位
         while ((sum & first) == 0) {
             first <<= 1;
         }
