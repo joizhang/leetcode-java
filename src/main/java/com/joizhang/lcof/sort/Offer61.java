@@ -17,6 +17,7 @@ public class Offer61 {
                 return false;
             }
         }
+        // 最大牌 - 最小牌 < 5 则可构成顺子
         return nums[4] - nums[joker] < 5;
     }
 
