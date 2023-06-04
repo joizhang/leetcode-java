@@ -20,7 +20,7 @@ public class Q033SearchInRotatedSortedArray {
                     lo = mid + 1;
                 }
             } else { // 右边递增
-                if (nums[mid] < target && target <= nums[n - 1]) {
+                if (nums[mid] < target && target <= nums[hi]) {
                     lo = mid + 1;
                 } else {
                     hi = mid - 1;
