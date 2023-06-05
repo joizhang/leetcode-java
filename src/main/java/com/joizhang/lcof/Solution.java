@@ -1,25 +1,20 @@
 package com.joizhang.lcof;
 
-public class Solution {
+import com.joizhang.lcof.tree.TreeNode;
 
-    public int minArray(int[] numbers) {
-        int lo = 0, hi = numbers.length - 1;
-        while (lo <= hi) {
-            int mid = lo + (hi - lo) / 2;
-            if (numbers[mid] > numbers[hi]) {
-                lo = mid + 1;
-            } else if (numbers[mid] < numbers[hi]) {
-                hi = mid;
-            } else {
-                hi -= 1;
-            }
-        }
-        return numbers[lo];
+public class Solution {
+    public boolean isSubStructure(TreeNode A, TreeNode B) {
+        if (A == null || B == null) return false;
+        return recur(A, B) || isSubStructure(A.left, B) || isSubStructure(A.right, B);
+    }
+
+    private boolean recur(TreeNode A, TreeNode B) {
+        if (B == null) return true;
+        if (A == null || A.val != B.val) return false;
+        return recur(A.left, B.left) && recur(A.right, B.right);
     }
 
     public static void main(String[] args) {
         Solution test = new Solution();
-        System.out.println(test.minArray(new int[]{3, 4, 5, 1, 2}));
-        System.out.println(test.minArray(new int[]{2, 2, 2, 0, 1}));
     }
 }
