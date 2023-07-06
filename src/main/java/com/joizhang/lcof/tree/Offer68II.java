@@ -31,6 +31,6 @@ public class Offer68II {
         TreeNode p = root.left.right.left;
         TreeNode q = root.right.right;
         TreeNode node = test.lowestCommonAncestor(root, p, q);
-        System.out.println(codec.serialize(root));
+        System.out.println(codec.serialize(node));
     }
 }
